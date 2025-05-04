@@ -12,26 +12,26 @@
             --light-color: #f8f9fa;
             --gradient: linear-gradient(135deg, var(--primary-color), #9181ff);
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
             background-color: var(--light-color);
             color: var(--dark-color);
             line-height: 1.6;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         /* Header */
         header {
             background: var(--gradient);
@@ -39,40 +39,40 @@
             padding: 20px 0;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
-        
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 20px;
         }
-        
+
         .logo {
             font-size: 28px;
             font-weight: 700;
             letter-spacing: 1px;
         }
-        
+
         .logo span {
             color: var(--secondary-color);
         }
-        
+
         .nav-links {
             display: flex;
             gap: 30px;
         }
-        
+
         .nav-links a {
             color: white;
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
         }
-        
+
         .nav-links a:hover {
             color: var(--secondary-color);
         }
-        
+
         .cta-button {
             background-color: var(--secondary-color);
             color: white;
@@ -85,19 +85,19 @@
             text-decoration: none;
             display: inline-block;
         }
-        
+
         .cta-button:hover {
             background-color: #ff5252;
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        
+
         /* Activation Section */
         .activation-section {
             padding: 80px 0;
             min-height: calc(100vh - 300px);
         }
-        
+
         .activation-card {
             background-color: white;
             border-radius: 10px;
@@ -107,7 +107,7 @@
             margin: 0 auto;
             text-align: center;
         }
-        
+
         .activation-icon {
             width: 80px;
             height: 80px;
@@ -120,35 +120,35 @@
             color: white;
             font-size: 36px;
         }
-        
+
         .activation-title {
             font-size: 2rem;
             margin-bottom: 20px;
             color: var(--dark-color);
         }
-        
+
         .activation-description {
             font-size: 1.1rem;
             color: #666;
             margin-bottom: 30px;
         }
-        
+
         .activation-form {
             text-align: left;
             margin-bottom: 30px;
         }
-        
+
         .form-group {
             margin-bottom: 20px;
         }
-        
+
         .form-label {
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
             color: var(--dark-color);
         }
-        
+
         .form-input {
             width: 100%;
             padding: 12px 15px;
@@ -157,23 +157,23 @@
             font-size: 1rem;
             transition: all 0.3s ease;
         }
-        
+
         .form-input:focus {
             border-color: var(--primary-color);
             box-shadow: 0 0 0 2px rgba(74, 111, 255, 0.2);
             outline: none;
         }
-        
+
         .activation-steps {
             margin-top: 40px;
             text-align: left;
         }
-        
+
         .step {
             display: flex;
             margin-bottom: 20px;
         }
-        
+
         .step-number {
             width: 30px;
             height: 30px;
@@ -187,43 +187,43 @@
             margin-right: 15px;
             flex-shrink: 0;
         }
-        
+
         .step-content {
             flex-grow: 1;
         }
-        
+
         .step-title {
             font-weight: 600;
             margin-bottom: 5px;
             color: var(--dark-color);
         }
-        
+
         .step-description {
             color: #666;
             font-size: 0.95rem;
         }
-        
+
         /* Footer */
         footer {
             background-color: var(--dark-color);
             color: var(--light-color);
             padding: 60px 0 30px;
         }
-        
+
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 40px;
             margin-bottom: 40px;
         }
-        
+
         .footer-column h3 {
             font-size: 1.3rem;
             margin-bottom: 20px;
             position: relative;
             padding-bottom: 10px;
         }
-        
+
         .footer-column h3::after {
             content: '';
             position: absolute;
@@ -233,26 +233,26 @@
             height: 2px;
             background-color: var(--primary-color);
         }
-        
+
         .footer-column ul {
             list-style: none;
         }
-        
+
         .footer-column ul li {
             margin-bottom: 10px;
         }
-        
+
         .footer-column ul li a {
             color: #ccc;
             text-decoration: none;
             transition: all 0.3s ease;
         }
-        
+
         .footer-column ul li a:hover {
             color: var(--primary-color);
             padding-left: 5px;
         }
-        
+
         .footer-bottom {
             text-align: center;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -260,17 +260,17 @@
             font-size: 0.9rem;
             color: #aaa;
         }
-        
+
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
-            
+
             .activation-card {
                 padding: 30px 20px;
             }
-            
+
             .activation-title {
                 font-size: 1.8rem;
             }
@@ -316,24 +316,6 @@
                 </div>
 
                 <script>
-                    // Fonction pour générer une clé d'activation aléatoire
-                    function generateActivationKey() {
-                        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-                        let key = '';
-                        
-                        // Générer 4 groupes de 4 caractères
-                        for (let group = 0; group < 4; group++) {
-                            for (let i = 0; i < 4; i++) {
-                                key += chars.charAt(Math.floor(Math.random() * chars.length));
-                            }
-                            if (group < 3) {
-                                key += '-';
-                            }
-                        }
-                        
-                        return key;
-                    }
-                    
                     // Fonction pour copier la clé dans le presse-papiers
                     function copyToClipboard(text) {
                         navigator.clipboard.writeText(text).then(function() {
@@ -343,7 +325,7 @@
                             messageDiv.style.backgroundColor = 'rgba(40, 167, 69, 0.1)';
                             messageDiv.style.color = '#28a745';
                             messageDiv.textContent = 'Clé copiée dans le presse-papiers!';
-                            
+
                             // Cacher le message après 2 secondes
                             setTimeout(function() {
                                 messageDiv.style.display = 'none';
@@ -352,47 +334,31 @@
                             console.error('Erreur lors de la copie: ', err);
                         });
                     }
-                    
+
+                    // Clé d'activation fixe (provenant du fichier keys.txt)
+                    const fixedKey = "4NUB-3C11-HAI0-EX1Z";
+
                     // Gérer le clic sur le bouton BUY
                     document.getElementById('buy-button').addEventListener('click', function() {
-                        // Générer une nouvelle clé
-                        const key = generateActivationKey();
-                        
+                        // Utiliser la clé fixe
+                        const key = fixedKey;
+
                         // Afficher la clé dans le champ
                         const keyInput = document.getElementById('activation-key');
                         keyInput.value = key;
-                        
+
                         // Afficher le bouton de copie
                         const copyButton = document.getElementById('copy-button');
                         copyButton.style.display = 'block';
-                        
+
                         // Afficher un message de succès
                         const messageDiv = document.getElementById('activation-message');
                         messageDiv.style.display = 'block';
                         messageDiv.style.backgroundColor = 'rgba(40, 167, 69, 0.1)';
                         messageDiv.style.color = '#28a745';
                         messageDiv.innerHTML = '<strong>Félicitations!</strong> Votre achat a été effectué avec succès. Voici votre clé d\'activation. N\'oubliez pas de la copier et de la conserver en lieu sûr.';
-                        
-                        // Enregistrer la clé localement dans le localStorage
-                        try {
-                            // Récupérer les clés existantes
-                            let keys = JSON.parse(localStorage.getItem('merchdays_keys') || '[]');
-                            
-                            // Ajouter la nouvelle clé avec un timestamp
-                            keys.push({
-                                key: key,
-                                timestamp: new Date().toISOString()
-                            });
-                            
-                            // Sauvegarder dans le localStorage
-                            localStorage.setItem('merchdays_keys', JSON.stringify(keys));
-                            
-                            console.log('Clé enregistrée localement:', key);
-                        } catch (error) {
-                            console.error('Erreur lors de l\'enregistrement local de la clé:', error);
-                        }
                     });
-                    
+
                     // Gérer le clic sur le bouton de copie
                     document.getElementById('copy-button').addEventListener('click', function() {
                         const keyInput = document.getElementById('activation-key');
@@ -403,7 +369,7 @@
                 <div class="download-section" style="margin-top: 40px; padding: 30px; background-color: rgba(74, 111, 255, 0.05); border-radius: 10px; text-align: center;">
                     <h3 style="margin-bottom: 20px; color: var(--dark-color);">Téléchargez MERCHDAYS</h3>
                     <p style="margin-bottom: 25px; color: #666;">Choisissez la version compatible avec votre système d'exploitation</p>
-                    
+
                     <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 30px;">
                         <a href="#" class="download-button" style="display: flex; align-items: center; background-color: white; padding: 15px 25px; border-radius: 8px; text-decoration: none; color: var(--dark-color); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); transition: all 0.3s ease; border: 1px solid #eee;">
                             <div style="font-size: 30px; margin-right: 15px;">🪟</div>
@@ -427,7 +393,7 @@
                             </div>
                         </a>
                     </div>
-                    
+
                     <p style="font-size: 0.9rem; color: #666;">Version actuelle: 1.2.0 | Mise à jour: 15 juin 2025</p>
                 </div>
 
@@ -472,7 +438,7 @@
                             this.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.1)';
                             this.style.borderColor = 'var(--primary-color)';
                         });
-                        
+
                         button.addEventListener('mouseout', function() {
                             this.style.transform = 'translateY(0)';
                             this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.05)';
