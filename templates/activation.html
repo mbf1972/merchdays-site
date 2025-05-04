@@ -281,12 +281,12 @@
         <nav class="container">
             <div class="logo">MERCH<span>DAYS</span></div>
             <div class="nav-links">
-                <a href="/#features">Fonctionnalités</a>
-                <a href="/#pricing">Tarifs</a>
-                <a href="/#testimonials">Témoignages</a>
-                <a href="/#faq">FAQ</a>
+                <a href="index.html#features">Fonctionnalités</a>
+                <a href="index.html#pricing">Tarifs</a>
+                <a href="index.html#testimonials">Témoignages</a>
+                <a href="index.html#faq">FAQ</a>
             </div>
-            <a href="/" class="cta-button">Retour à l'accueil</a>
+            <a href="index.html" class="cta-button">Retour à l'accueil</a>
         </nav>
     </header>
 
@@ -314,24 +314,6 @@
                 </div>
 
                 <script>
-                    // Fonction pour générer une clé d'activation aléatoire
-                    function generateActivationKey() {
-                        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-                        let key = '';
-
-                        // Générer 4 groupes de 4 caractères
-                        for (let group = 0; group < 4; group++) {
-                            for (let i = 0; i < 4; i++) {
-                                key += chars.charAt(Math.floor(Math.random() * chars.length));
-                            }
-                            if (group < 3) {
-                                key += '-';
-                            }
-                        }
-
-                        return key;
-                    }
-
                     // Fonction pour copier la clé dans le presse-papiers
                     function copyToClipboard(text) {
                         navigator.clipboard.writeText(text).then(function() {
@@ -351,10 +333,13 @@
                         });
                     }
 
+                    // Clé d'activation fixe (provenant du fichier keys.txt)
+                    const fixedKey = "4NUB-3C11-HAI0-EX1Z";
+
                     // Gérer le clic sur le bouton BUY
                     document.getElementById('buy-button').addEventListener('click', function() {
-                        // Générer une nouvelle clé
-                        const key = generateActivationKey();
+                        // Utiliser la clé fixe
+                        const key = fixedKey;
 
                         // Afficher la clé dans le champ
                         const keyInput = document.getElementById('activation-key');
@@ -370,24 +355,6 @@
                         messageDiv.style.backgroundColor = 'rgba(40, 167, 69, 0.1)';
                         messageDiv.style.color = '#28a745';
                         messageDiv.innerHTML = '<strong>Félicitations!</strong> Votre achat a été effectué avec succès. Voici votre clé d\'activation. N\'oubliez pas de la copier et de la conserver en lieu sûr.';
-
-                        // Enregistrer la clé dans le fichier via une requête AJAX
-                        fetch('/save-key', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                            body: JSON.stringify({
-                                key: key
-                            })
-                        })
-                        .then(response => response.json())
-                        .then(data => {
-                            console.log('Clé enregistrée:', data);
-                        })
-                        .catch(error => {
-                            console.error('Erreur lors de l\'enregistrement de la clé:', error);
-                        });
                     });
 
                     // Gérer le clic sur le bouton de copie
@@ -492,10 +459,10 @@
                 <div class="footer-column">
                     <h3>Liens rapides</h3>
                     <ul>
-                        <li><a href="/#features">Fonctionnalités</a></li>
-                        <li><a href="/#pricing">Tarifs</a></li>
-                        <li><a href="/#testimonials">Témoignages</a></li>
-                        <li><a href="/#faq">FAQ</a></li>
+                        <li><a href="index.html#features">Fonctionnalités</a></li>
+                        <li><a href="index.html#pricing">Tarifs</a></li>
+                        <li><a href="index.html#testimonials">Témoignages</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
